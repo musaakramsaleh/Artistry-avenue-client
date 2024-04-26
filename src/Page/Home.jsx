@@ -7,7 +7,7 @@ import { Slide } from 'react-awesome-reveal';
 const Home = () => {
   
   const [theme, setTheme] = useState(localStorage.getItem('theme')|| 'light'); 
-  
+  const [review,setReview] = useState({})
  
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme'); 
@@ -20,7 +20,14 @@ const Home = () => {
     localStorage.setItem('theme', theme); 
   }, [theme]); 
   
-  
+  useEffect(()=>{
+    fetch('customer.json')
+    .then(res=>res.json())
+    .then(data=>{
+        setReview(data)
+        console.log
+    })
+  },[])
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme); 
@@ -70,6 +77,27 @@ const Home = () => {
           </div>
          </Slide>
         </div>
+        <div className='mt-16'>
+            <div className='max-w-[400px] mx-auto mt-5 mb-24'>
+            <h2 className='text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>Our Client Reviews</h2>
+
+            </div>
+        <div className='grid grid-cols-3 gap-6'>
+        {
+            review.map(reviews=><div className='mt-3' key={reviews.id}>
+               <div className="card text center bg-base-100 shadow-xl">
+
+  <div className="text-center">
+    <h2 className="text-center font-bold">{reviews.user}</h2>
+    <p>"</p>
+    <p>{reviews.comment}</p>
+    <p>"</p>
+  </div>
+</div>
+            </div>)
+        }
+        </div>
+      </div>
       </div>
     </div>
   );

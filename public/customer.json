@@ -1,0 +1,41 @@
+
+    [
+      {
+        "id": 1,
+        "user": "John Doe",
+        "rating": 5,
+        "comment": "An outstanding service! Everything was seamless and I couldn't be happier."
+      },
+      {
+        "id": 2,
+        "user": "Jane Smith",
+        "rating": 4,
+        "comment": "Great experience, but the waiting time could be improved. Overall, I'm satisfied."
+      },
+      {
+        "id": 3,
+        "user": "Mike Johnson",
+        "rating": 5,
+        "comment": "Fantastic product quality! Will definitely buy again. Highly recommended."
+      },
+      {
+        "id": 4,
+        "user": "Emily Davis",
+        "rating": 3,
+        "comment": "Good, but not great. The product worked as expected, but it lacked some features."
+      },
+      {
+        "id": 5,
+        "user": "William Brown",
+        "rating": 2,
+        "comment": "The customer support was lacking, and I encountered several issues with the product."
+      },
+      {
+        "id": 6,
+        "user": "Jessica Wilson",
+        "rating": 4,
+        "comment": "The overall experience was positive, but some parts could be more user-friendly."
+      }
+    ]
+  
+  
