@@ -8,7 +8,7 @@ function App() {
   return (
     
       <div className='max-w-[1440px] mx-auto'>
-        <h2 className='p-2 font-extrabold'>Hello world</h2>
+        <h2 className='p-2 font-extrabold text-6xl'>Hello world</h2>
         <Slider></Slider>
         </div>
   
