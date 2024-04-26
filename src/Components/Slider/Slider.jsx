@@ -25,7 +25,7 @@ const Slider = () => {
                 <div className='relative lg:p-60 md:p-28 p-12'>
                     
                     <div className='relative z-50'>
-                    <Slide  triggerOnce>
+                    <Slide>
                     <h1 style={{ color: 'white' ,zIndex:30}} className='relative lg:text-[50px] text-xl font-bold z-20'>Transform your space  <br /><br />with unique art<br className='hidden lg:block' /><br />Discover paintings that speak to <br /><br /> your soul.</h1>
                    </Slide>
                     </div>

@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Errorpage from '../Components/Errorpage/Errorpage';
 import Root from '../Components/Root/Root';
 import Home from '../Page/Home';
+import Allart from '../Page/Allart';
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>
+        },
+        {
+            path:'/new',
+            element:<Allart></Allart>
+
         }
     ]
     }])

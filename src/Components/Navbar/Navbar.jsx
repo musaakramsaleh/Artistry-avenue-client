@@ -5,14 +5,17 @@ const Navbar = () => {
     const navItems = ()=>{
         return <>
          <li><NavLink to='/' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Home</NavLink></li>
-         <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>All Art & craft Items</NavLink></li>
+         <li><NavLink to='/new' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>All Art & craft Items</NavLink></li>
          <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Add Craft Item</NavLink></li>
          <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>My Art&Craft List</NavLink></li>
         </>
     }
     return (
         <div className=''>
-        
+           <div>
+            <button>Register</button>
+            <button>LOgin</button>
+           </div>
             <div className="navbar bg-base-100   bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]">
   <div className="navbar-start">
     <div className="dropdown">
