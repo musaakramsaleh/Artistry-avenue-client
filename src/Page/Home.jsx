@@ -37,7 +37,7 @@ const Home = () => {
   const buttonBgColor = theme === 'light' ? 'bg-red-400' : 'bg-blue-400';
   
   return (
-    <div className='min-h-screen' data-theme={theme}>
+    <div  data-theme={theme}>
       <div className='max-w-[1440px] mx-auto'>
         <button 
           onClick={toggleTheme} 

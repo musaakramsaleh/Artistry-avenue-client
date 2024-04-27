@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import UseAuth from '../../Hooks/UseAuth';
 
 const Navbar = () => {
+   const {user,logout} = UseAuth()
+   const handleSignout =()=>{
+    logout()
+    .then()
+    .catch()
+  
+}
     const navItems = ()=>{
         return <>
          <li><NavLink to='/' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Home</NavLink></li>
          <li><NavLink to='/new' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>All Art & craft Items</NavLink></li>
          <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Add Craft Item</NavLink></li>
          <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>My Art&Craft List</NavLink></li>
-         <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Register</NavLink></li>
-         <li><NavLink to='/asset' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Login</NavLink></li>
-        </>
+         </>
     }
     return (
         <div className=''>
@@ -37,7 +43,21 @@ const Navbar = () => {
         
     </ul>
     
+    {
+    user? <div className="avatar ml-3">
+      
+    <div className="w-12 rounded-full cursor-pointer">
+      <img src= {user.photoURL} title={user.displayName} />
+      
+    </div>
+    <button onClick={()=>handleSignout()} className='p-3 rounded-lg ml-3 text-white font-bold bg-yellow-300'>Logout</button>
+  </div>:<>
+  <Link to='/login'  className="p-3 rounded-lg ml-3 text-white font-bold bg-yellow-300">Login</Link>
+    <Link to='/register'  className="p-3 rounded-lg ml-3 text-white font-bold bg-yellow-300">Register</Link>
+  </>
+   
   
+  }
   </div>
   
 </div>
