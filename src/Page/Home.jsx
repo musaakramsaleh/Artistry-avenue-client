@@ -7,7 +7,7 @@ import { Slide } from 'react-awesome-reveal';
 const Home = () => {
   
   const [theme, setTheme] = useState(localStorage.getItem('theme')|| 'light'); 
-  const [review,setReview] = useState({})
+  const [review,setReview] = useState([])
  
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme'); 
