@@ -10,6 +10,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Firebase_Provider>
     <React.StrictMode>
    <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
   </Firebase_Provider>
 )

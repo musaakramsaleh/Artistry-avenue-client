@@ -22,7 +22,8 @@ const router = createBrowserRouter([
         },
         {
             path:'/new',
-            element:<Allart></Allart>
+            element:<Allart></Allart>,
+            loader:()=> fetch('http://localhost:3000/paints')
 
         },
         {

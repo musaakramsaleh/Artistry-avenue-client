@@ -44,8 +44,8 @@ const Addcard = () => {
 }
     return (
         <div>
-      <div className="bg-blue-200 p-24 max-w-screen-2xl mx-auto">
-        <h2 className="text-center text-4xl font-bold">Add a Coffee</h2>
+      <div className="bg-blue-200 p-24 max-w-screen-2xl mx-auto mt-5">
+        <h2 className="text-center text-4xl font-bold mb-2">Add a Painting</h2>
         <form onSubmit={onSubmit}>
           <div className="flex gap-5">
             <div className="w-1/2">

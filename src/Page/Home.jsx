@@ -52,7 +52,7 @@ const Home = () => {
         <h2 className='max-w-[300px] mt-24 mx-auto text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>
         Craft Items:
             </h2>
-        <div className='grid grid-cols-3 justify-between'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between'>
           {
             paints.map(paint=><SinglePaint key = {paint._id} paint = {paint}></SinglePaint>)
           }
@@ -92,7 +92,7 @@ const Home = () => {
             <h2 className='text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>Our Client Reviews</h2>
 
             </div>
-        <div className='grid grid-cols-3 gap-6'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
         {
             review.map(reviews=><div className='mt-3' key={reviews.id}>
                <div className="card text center bg-base-100 shadow-xl">
