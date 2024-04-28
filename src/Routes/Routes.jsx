@@ -7,6 +7,7 @@ import Allart from '../Page/Allart';
 import Register from '../Components/Register';
 import Login from '../Components/Login';
 import Addcard from '../Page/Addcard';
+import Paintdetails from '../Components/Paint_detais/Paintdetails';
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         {
             path:'/addcraft',
             element:<Addcard></Addcard>
+        },
+        {
+            path:'/Paintdetails/:id',
+            element:<Paintdetails></Paintdetails>
         }
     ]
     }])

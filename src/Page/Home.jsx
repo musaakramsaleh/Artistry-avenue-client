@@ -3,9 +3,11 @@ import Slider from '../Components/Slider/Slider';
 import { SiOpenai, SiPytorch, SiTensorflow } from 'react-icons/si';
 import { RiBardFill } from 'react-icons/ri';
 import { Slide } from 'react-awesome-reveal';
+import SinglePaint from '../Components/Single-paint/SinglePaint';
+import useData from '../Hooks/UseData';
 
 const Home = () => {
-  
+  const {paints} = useData()
   const [theme, setTheme] = useState(localStorage.getItem('theme')|| 'light'); 
   const [review,setReview] = useState([])
  
@@ -47,7 +49,14 @@ const Home = () => {
         </button>
         
         <Slider />
-        
+        <h2 className='max-w-[300px] mt-24 mx-auto text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>
+        Craft Items:
+            </h2>
+        <div className='grid grid-cols-3 justify-between'>
+          {
+            paints.map(paint=><SinglePaint key = {paint._id} paint = {paint}></SinglePaint>)
+          }
+        </div>
         <div className='mt-16'>
           <div className='max-w-[300px] mx-auto'>
             <h2 className='text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>
@@ -77,6 +86,7 @@ const Home = () => {
           </div>
          </Slide>
         </div>
+        
         <div className='mt-16'>
             <div className='max-w-[400px] mx-auto mt-5 mb-24'>
             <h2 className='text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>Our Client Reviews</h2>

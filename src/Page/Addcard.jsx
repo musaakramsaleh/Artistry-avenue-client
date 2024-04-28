@@ -1,5 +1,7 @@
 import React from 'react';
 import UseAuth from '../Hooks/UseAuth';
+import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 const Addcard = () => {
   const {user} = UseAuth()
@@ -31,7 +33,11 @@ const Addcard = () => {
     .then(data=>{
       console.log(data)
       if(data.insertedId){
-        alert('Users added successfully')
+        Swal.fire({
+          title: "Success!",
+          text: "Data added Successfully!",
+          icon: "success"
+        });
         form.reset()
       }
     })
