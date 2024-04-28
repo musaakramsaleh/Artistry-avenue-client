@@ -6,6 +6,7 @@ import Home from '../Page/Home';
 import Allart from '../Page/Allart';
 import Register from '../Components/Register';
 import Login from '../Components/Login';
+import Addcard from '../Page/Addcard';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         {
             path:'/login',
             element:<Login></Login>
+        },
+        {
+            path:'/addcraft',
+            element:<Addcard></Addcard>
         }
     ]
     }])
