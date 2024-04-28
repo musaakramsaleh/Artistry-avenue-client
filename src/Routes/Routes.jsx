@@ -8,6 +8,7 @@ import Register from '../Components/Register';
 import Login from '../Components/Login';
 import Addcard from '../Page/Addcard';
 import Paintdetails from '../Components/Paint_detais/Paintdetails';
+import Myitems from '../Page/Myitems';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
             path:'/Paintdetails/:id',
             element:<Paintdetails></Paintdetails>
+        },
+        {
+            path:'/myitems',
+            element:<Myitems></Myitems>
         }
     ]
     }])
