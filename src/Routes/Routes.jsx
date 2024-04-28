@@ -9,6 +9,7 @@ import Login from '../Components/Login';
 import Addcard from '../Page/Addcard';
 import Paintdetails from '../Components/Paint_detais/Paintdetails';
 import Myitems from '../Page/Myitems';
+import Update from '../Components/Update';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         {
             path:'/myitems',
             element:<Myitems></Myitems>
+        },
+        {
+            path:'/update/:id',
+            element:<Update></Update>,
+            loader: ({params})=>fetch(`http://localhost:3000/paint/${params.id}`)
         }
     ]
     }])
