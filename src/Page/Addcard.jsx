@@ -19,6 +19,22 @@ const Addcard = () => {
     const username = user.displayName
     const product = {image,item_name,subCategory,description,price,rating,customization,processing_time,StockStatus,email,username}
     console.log(product)
+
+    fetch('http://localhost:3000/addproduct',{
+      method:'POST',
+      headers:{
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+      if(data.insertedId){
+        alert('Users added successfully')
+        form.reset()
+      }
+    })
 }
     return (
         <div>
