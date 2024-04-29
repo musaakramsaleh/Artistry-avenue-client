@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         {
             path:'/new',
             element:<Allart></Allart>,
-            loader:()=> fetch('http://localhost:3000/paints')
+            loader:()=> fetch('https://assignment-10-server-nine-dun.vercel.app/paints')
 
         },
         {
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         {
             path:'/update/:id',
             element:<Update></Update>,
-            loader: ({params})=>fetch(`http://localhost:3000/paint/${params.id}`)
+            loader: ({params})=>fetch(`https://assignment-10-server-nine-dun.vercel.app/paint/${params.id}`)
         },
         {
             path:'/categorydata/:subcategory',

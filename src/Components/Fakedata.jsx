@@ -13,7 +13,7 @@ const Fakedata = () => {
     const Categories = {image,subCategory,types}
     console.log(Categories)
 
-    fetch('http://localhost:3000/category',{
+    fetch('https://assignment-10-server-nine-dun.vercel.app/category',{
       method:'POST',
       headers:{
         'content-type': 'application/json'

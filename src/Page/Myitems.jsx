@@ -9,7 +9,7 @@ const Myitems = () => {
     const [paints,setpaints] =useState([])
     console.log(user)
     useEffect(()=>{
-        fetch(`http://localhost:3000/paints/${user?.email}`)
+        fetch(`https://assignment-10-server-nine-dun.vercel.app/paints/${user?.email}`)
         .then((res)=>res.json())
         .then(data=>{
              setpaints(data)
@@ -41,7 +41,7 @@ const Myitems = () => {
       }).then((result) => {
         if (result.isConfirmed) {
           
-        fetch(`http://localhost:3000/paints/${id}`,{
+        fetch(`https://assignment-10-server-nine-dun.vercel.app/paints/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

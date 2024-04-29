@@ -5,7 +5,7 @@ const useData = () => {
     const [category,setCategory] = useState([])
     useEffect(()=>{
         const fetchData = async()=>{
-            const res = await fetch('http://localhost:3000/paints')
+            const res = await fetch('https://assignment-10-server-nine-dun.vercel.app/paints')
             const data = await res.json()
             setPaints(data)
         }
@@ -13,7 +13,7 @@ const useData = () => {
     },[])
     useEffect(()=>{
         const setcategory = async()=>{
-            const res = await fetch('http://localhost:3000/category')
+            const res = await fetch('https://assignment-10-server-nine-dun.vercel.app/category')
             const data = await res.json()
             setCategory(data)
         }

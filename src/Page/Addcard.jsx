@@ -22,7 +22,7 @@ const Addcard = () => {
     const product = {image,item_name,subCategory,description,price,rating,customization,processing_time,StockStatus,email,username}
     console.log(product)
 
-    fetch('http://localhost:3000/addproduct',{
+    fetch('https://assignment-10-server-nine-dun.vercel.app/addproduct',{
       method:'POST',
       headers:{
         'content-type': 'application/json'

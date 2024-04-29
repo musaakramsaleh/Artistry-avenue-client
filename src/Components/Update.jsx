@@ -19,7 +19,7 @@ const Update = () => {
       const updatedproduct = {image,item_name,subCategory,description,price,rating,customization,processing_time,StockStatus}
       console.log(updatedproduct)
   
-      fetch(`http://localhost:3000/paint/${paint._id}`,{
+      fetch(`https://assignment-10-server-nine-dun.vercel.app/paint/${paint._id}`,{
         method:'PUT',
         headers:{
           'content-type': 'application/json'
