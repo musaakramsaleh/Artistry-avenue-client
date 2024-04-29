@@ -44,8 +44,8 @@ const Update = () => {
         <div className="bg-blue-200 p-24 max-w-screen-2xl mx-auto mt-5">
         <h2 className="text-center text-4xl font-bold mb-2">Update Painting</h2>
         <form onSubmit={onSubmit}>
-          <div className="flex gap-5">
-            <div className="w-1/2">
+          <div className="md:flex  gap-5">
+            <div className="md:w-1/2 w-full">
               <label>Image:</label><br />
               <input
                 type="text"
@@ -55,7 +55,7 @@ const Update = () => {
                 defaultValue={paint.image}
               />
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full">
               <label>Item Name:</label><br />
               <input
                 type="text"
@@ -67,11 +67,11 @@ const Update = () => {
             </div>
           </div>
 
-          <div className="flex gap-5 mt-5">
-            <div className="w-1/2">
+          <div className="md:flex  gap-5 mt-5">
+            <div className="md:w-1/2 w-full">
               <label>Sub-category:</label><br />
               <label>default value: {paint.subCategory}</label><br />
-              <div className="grid grid-cols-2 gap-3 items-center justify-center">
+              {/* <div className="grid grid-cols-2 gap-3 items-center justify-center">
                 <label className='text-center'>
                   <input type="radio" name="subcategory" value="Landscape Painting" /> Landscape Painting
                 </label>
@@ -90,16 +90,52 @@ const Update = () => {
                 <label className='text-center'>
                   <input type="radio" name="subcategory" value="Cartoon Drawing" /> Cartoon Drawing
                 </label>
+              </div> */}
+              <div className="form-control">
+              <label className="label cursor-pointer">
+              <span className="label-text">Landscape Painting</span> 
+              <input type="radio" name="subcategory" value='Landscape Painting' className="radio checked:bg-blue-500" checked />
+               </label>
+             </div>
+             <div className="form-control">
+             <label className="label cursor-pointer">
+             <span className="label-text">Portrait Drawing</span> 
+             <input type="radio" name="subcategory" value='Portrait Drawing' className="radio checked:bg-blue-500" checked />
+              </label>
+              </div>
+             <div className="form-control">
+             <label className="label cursor-pointer">
+             <span className="label-text">Watercolour Painting</span> 
+             <input type="radio" name="subcategory" value='Watercolour Painting' className="radio checked:bg-blue-500" checked />
+              </label>
+              </div>
+             <div className="form-control">
+             <label className="label cursor-pointer">
+             <span className="label-text">Oil Painting</span> 
+             <input type="radio" name="subcategory" value='Oil Painting' className="radio checked:bg-blue-500" checked />
+              </label>
+              </div>
+             <div className="form-control">
+             <label className="label cursor-pointer">
+             <span className="label-text">Charcoal Sketching</span> 
+             <input type="radio" name="subcategory" value='Charcoal Sketching' className="radio checked:bg-blue-500" checked />
+              </label>
+              </div>
+             <div className="form-control">
+             <label className="label cursor-pointer">
+             <span className="label-text">Cartoon Drawing</span> 
+             <input type="radio" name="subcategory" value='Cartoon Drawing' className="radio checked:bg-blue-500" checked />
+              </label>
               </div>
             </div>
 
             <div className="w-1/2">
               <label>Short Description</label><br />
-              <textarea name="short_description" defaultValue={paint.description} id="" cols="50" rows="10"></textarea>
+              <textarea name="short_description" defaultValue={paint.description} id="" cols="20" rows="10"></textarea>
             </div>
           </div>
-          <div className="flex gap-5">
-            <div className="w-1/2">
+          <div className="md:flex gap-5">
+            <div className="md:w-1/2 w-full">
               <label>Price:</label><br />
               <input
                 type="text"
@@ -109,7 +145,7 @@ const Update = () => {
                 defaultValue={paint.price}
               />
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full">
               <label>Rating:</label><br />
               <input
                 type="text"
@@ -120,7 +156,7 @@ const Update = () => {
               />
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="md:flex justify-between">
           <div>
           <label>Customization:</label><br />
           <label>default value: {paint.customization}</label><br />
@@ -131,7 +167,7 @@ const Update = () => {
                   <input type="radio" name="Customization" value="No" />No
                 </label>
           </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full">
               <label>Processing Time:</label><br />
               <input
                 type="text"

@@ -44,7 +44,7 @@ const Home = () => {
 // console.log(category.types.split(',')[0])
   return (
     <div  data-theme={theme}>
-      <div className='max-w-[1440px] mx-auto'>
+      <div className='max-w-[1440px] mx-auto pb-10'>
         <button 
           onClick={toggleTheme} 
           className={`p-4 text-white font-bold ${buttonBgColor}`}
@@ -65,10 +65,10 @@ const Home = () => {
         <div className='max-w-[400px] mx-auto mt-16 mb-24'>
         <h2 className='text-center text-4xl shadow-lg p-2 bg-gradient-to-r from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)]'>Art & Craft Categories</h2>
         </div>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 justify-between'>
         {
             category.map(reviews=><div className='mt-3' key={reviews._id}>
-               <Link to={`/categorydata/${reviews.subCategory}`}><div className="card text max-w-[370px] center bg-base-100 shadow-xl">
+               <Link to={`/categorydata/${reviews.subCategory}`}><div className="card text max-w-[370px] mx-auto center bg-base-100 shadow-xl">
 
   <div className="">
     <h2 className=" font-bold">{reviews.subCategory}</h2>

@@ -70,26 +70,7 @@ const Addcard = () => {
           <div className="md:flex gap-5 mt-5">
             <div className="w-1/2">
               <label>Sub-category:</label><br />
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center justify-center">
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Landscape Painting:" /> Landscape Painting
-                </label>
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Portrait Drawing" /> Portrait Drawing
-                </label>
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Watercolour Painting" /> Watercolour Painting
-                </label>
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Oil Painting" /> Oil Painting
-                </label>
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Charcoal Sketching" /> Charcoal Sketching
-                </label>
-                <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Cartoon Drawing" /> Cartoon Drawing
-                </label>
-              </div> */}
+            
               <div className="form-control">
               <label className="label cursor-pointer">
               <span className="label-text">Landscape Painting</span> 

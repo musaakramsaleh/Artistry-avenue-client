@@ -10,7 +10,7 @@ const Categorydata = () => {
     const hexa =  paints.filter(paint=>paint.subCategory=== category)
     return (
         <div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between'>
+            <div className='grid max-w-[1440px] mx-auto lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between'>
           {
             hexa.map(paint=><CategorySingle key = {paint._id} paint = {paint}></CategorySingle>)
           }
