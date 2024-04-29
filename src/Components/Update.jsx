@@ -1,14 +1,49 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Update = () => {
     const paint = useLoaderData()
-    console.log(paint)
+    const onSubmit = e =>{
+      e.preventDefault()
+      const form = e.target
+      const image = form.image.value
+      const item_name = form.itemName.value
+      const subCategory = form.subcategory.value
+      const description = form.short_description.value
+      const price = form.price.value
+      const rating = form.rating.value
+      const customization = form.Customization.value
+      const processing_time = form.processing_time.value
+      const StockStatus = form.StockStatus.value
+      const updatedproduct = {image,item_name,subCategory,description,price,rating,customization,processing_time,StockStatus}
+      console.log(updatedproduct)
+  
+      fetch(`http://localhost:3000/paint/${paint._id}`,{
+        method:'PUT',
+        headers:{
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(updatedproduct)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data)
+        if(data.modifiedCount>0){
+          Swal.fire({
+            title: "Success!",
+            text: "Data updated Successfully!",
+            icon: "success"
+          });
+          form.reset()
+        }
+      })
+  }
     return (
         <div>
         <div className="bg-blue-200 p-24 max-w-screen-2xl mx-auto mt-5">
         <h2 className="text-center text-4xl font-bold mb-2">Update Painting</h2>
-        <form >
+        <form onSubmit={onSubmit}>
           <div className="flex gap-5">
             <div className="w-1/2">
               <label>Image:</label><br />

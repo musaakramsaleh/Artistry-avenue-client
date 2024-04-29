@@ -72,8 +72,8 @@ const Myitems = () => {
               </details>
         <div className='grid grid-cols-3   mt-10'>
             {
-                paints.map(paint=><div key={paint._id} className="card mx-auto max-w-96 bg-base-100 shadow-xl gap-5 mt-5">
-                <figure><img src="https://i.ibb.co/0KbTLP4/8431878.jpg"  alt="Shoes" /></figure>
+                paints.map(paint=><div key={paint._id} className="card mx-auto max-w-[390px] bg-base-100 shadow-xl gap-5 mt-5">
+                <figure><img src={paint.image} className='h-[384px]' alt="Shoes" /></figure>
                 <div className="card-body flex">
                 <h2 className="card-title">{paint.item_name}</h2>
                 <div >

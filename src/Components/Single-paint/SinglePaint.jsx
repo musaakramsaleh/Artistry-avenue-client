@@ -7,7 +7,7 @@ const SinglePaint = ({paint}) => {
             <div>
             
             <div className='max-w-[400px] mx-auto mt-10'>
-            <img src="https://i.ibb.co/0KbTLP4/8431878.jpg" alt="" />
+            <img src={paint.image} className='w-full h-[300px]' alt="" />
             <h2 className='text-xl text-center font-bold'>{paint.item_name}</h2>
             <div className='flex gap-3 mb-4 justify-between'>
             <p>price: {paint.price}</p>

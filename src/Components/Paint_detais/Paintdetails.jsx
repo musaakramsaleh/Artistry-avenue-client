@@ -16,7 +16,7 @@ const Paintdetails = () => {
     console.log(single)
     return (
         <div className='max-w-[1440px] mx-auto mt-5'>
-            <img src="https://i.ibb.co/0KbTLP4/8431878.jpg" className='md:w-2/3  md:h-[600px] h-[300px]' alt="" />
+            <img src={single.image} className='md:w-2/3  md:h-[600px] h-[300px]' alt="" />
            <div className='text-black font-bold'>
            <p className='text-2xl mt-3'>{single.item_name}</p>
            <p className='mt-2 lg:w-3/4'>{single.description}</p>
