@@ -1,6 +1,6 @@
 ## Artistry Avenue
 
-**Live Site URL:** [MyProperty Live Site](https://my-art-72b96.web.app/)
+**Live Site URL:** [Artistry Avenue Live Site] (https://my-art-72b96.web.app/)
 
 ### Features and Characteristics:
 - Contains Art data for sale.
