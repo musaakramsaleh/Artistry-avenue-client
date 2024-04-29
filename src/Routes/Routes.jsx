@@ -10,6 +10,8 @@ import Addcard from '../Page/Addcard';
 import Paintdetails from '../Components/Paint_detais/Paintdetails';
 import Myitems from '../Page/Myitems';
 import Update from '../Components/Update';
+import Privateroute from '../Components/Privateroute/Privateroute';
+import Categorydata from '../Components/Categorydata';
 
 
 const router = createBrowserRouter([
@@ -38,20 +40,24 @@ const router = createBrowserRouter([
         },
         {
             path:'/addcraft',
-            element:<Addcard></Addcard>
+            element:<Privateroute><Addcard></Addcard></Privateroute>
         },
         {
             path:'/Paintdetails/:id',
-            element:<Paintdetails></Paintdetails>
+            element:<Privateroute><Paintdetails></Paintdetails></Privateroute>
         },
         {
             path:'/myitems',
-            element:<Myitems></Myitems>
+            element:<Privateroute><Myitems></Myitems></Privateroute>
         },
         {
             path:'/update/:id',
             element:<Update></Update>,
             loader: ({params})=>fetch(`http://localhost:3000/paint/${params.id}`)
+        },
+        {
+            path:'/categorydata/:subcategory',
+            element:<Categorydata></Categorydata>
         }
     ]
     }])

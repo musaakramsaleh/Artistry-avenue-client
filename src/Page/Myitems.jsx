@@ -61,7 +61,7 @@ const Myitems = () => {
       });
    }
        return (
-        <div className='max-w-[1440px] mx-auto'>
+        <div className='max-w-[1440px] mx-auto mb-16'>
             <details className="dropdown mx-auto">
               <summary className="m-1 btn">Customization</summary>
               <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -70,10 +70,10 @@ const Myitems = () => {
                 <li onClick={handleall}><a>all</a></li>
                  </ul>
               </details>
-        <div className='grid grid-cols-3   mt-10'>
+        <div className='grid md:grid-cols-3 grid-cols-1   mt-10'>
             {
                 paints.map(paint=><div key={paint._id} className="card mx-auto max-w-[390px] bg-base-100 shadow-xl gap-5 mt-5">
-                <figure><img src={paint.image} className='h-[384px]' alt="Shoes" /></figure>
+                <figure><img src={paint.image} className='h-[384px] w-[390px]'  /></figure>
                 <div className="card-body flex">
                 <h2 className="card-title">{paint.item_name}</h2>
                 <div >

@@ -42,8 +42,9 @@ const Login = () => {
 };
     return (
       
-        <div>
-            <div className="hero max-w-[1440px] mx-auto pb-10  md:mb-44 mt-10">
+        <div className='min-h-screen'>
+          <h2 className='text-center mt-10 text-2xl font-bold'>Login</h2>
+            <div className="hero max-w-[1440px] mx-auto pb-10  mt-10">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleSubmit(onSubmit)}  className="p-16">
@@ -80,6 +81,7 @@ const Login = () => {
       </form>
       <div className='flex justify-around'>
                             <button onClick={()=>handlesociallogin(googleLogin)} className='p-2 bg-gradient-to-r  from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)] rounded-lg text-white font-semibold mb-4 text-[16px]'>Google Login</button>
+                            <button onClick={()=>handlesociallogin(googleLogin)} className='p-2 bg-gradient-to-r  from-[rgba(225,139,70,255)] to-[rgba(242,184,115,255)] rounded-lg text-white font-semibold mb-4 text-[16px]'>Github</button>
                         </div>
     </div>
   </div>

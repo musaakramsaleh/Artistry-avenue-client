@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer';
 
 const Root = () => {
     return (
@@ -9,6 +10,7 @@ const Root = () => {
             <div className='min-h-screen'>
             <Outlet></Outlet>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

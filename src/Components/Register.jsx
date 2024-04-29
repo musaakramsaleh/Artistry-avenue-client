@@ -2,15 +2,23 @@ import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UseAuth from '../Hooks/UseAuth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 const Register = () => {
     const {createUser,user,updateuserProfile} = UseAuth()
+    const location = useLocation()
+    const navigate = useNavigate()
+    const from = location?.state || '/'
     const handleSubmit = e =>{
         e.preventDefault()
         const form = e.target 
         const name = form.name.value
         const email = form.email.value
         const password = form.password.value
+        const photo = form.photo.value
+        if (name === '' || email === '' || password === '' || photo === '') {
+           return toast("NO field can be empty")
+        }
         if(!/[A-Z]/.test(password)){
             return toast("Password should have a uppercase letter")
           }
@@ -20,12 +28,17 @@ const Register = () => {
           if(password.length <6){
             return toast("Password have to be 6 character")
           }
-        const photo = form.photo.value
         const re = {name,email,password,photo}
         createUser(email,password)
         .then(()=>{
             updateuserProfile(name,photo).then(()=>{
-              toast('Successfully login')
+              Swal.fire({
+                title: "Success!",
+                text: "User created Successfully!",
+                icon: "success"
+              });
+              navigate(from);
+              
             })
           
           })

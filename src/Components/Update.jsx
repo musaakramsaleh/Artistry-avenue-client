@@ -73,7 +73,7 @@ const Update = () => {
               <label>default value: {paint.subCategory}</label><br />
               <div className="grid grid-cols-2 gap-3 items-center justify-center">
                 <label className='text-center'>
-                  <input type="radio" name="subcategory" value="Landscape Painting:" /> Landscape Painting
+                  <input type="radio" name="subcategory" value="Landscape Painting" /> Landscape Painting
                 </label>
                 <label className='text-center'>
                   <input type="radio" name="subcategory" value="Portrait Drawing" /> Portrait Drawing

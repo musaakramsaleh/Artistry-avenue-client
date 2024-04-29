@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../Hooks/UseAuth';
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip';
 
 const Navbar = () => {
    const {user,logout} = UseAuth()
@@ -14,8 +16,11 @@ const Navbar = () => {
         return <>
          <li><NavLink to='/' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Home</NavLink></li>
          <li><NavLink to='/new' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>All Art & craft Items</NavLink></li>
-         <li><NavLink to='/addcraft' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Add Craft Item</NavLink></li>
-         <li><NavLink to='/myitems' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>My Art&Craft List</NavLink></li>
+         {
+          user && <><li><NavLink to='/addcraft' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>Add Craft Item</NavLink></li>
+          <li><NavLink to='/myitems' className={({isActive})=>isActive?'text-primary font-bold':'text-secondary'}>My Art&Craft List</NavLink></li>
+          </>
+         }
          </>
     }
     return (
@@ -33,7 +38,7 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <Link to ="/" className="btn btn-ghost text-4xl text-secondary font-bold">Artistry Avenue</Link>
+    <Link to ="/" className="btn btn-ghost md:text-2xl text-xl lg:text-4xl text-secondary font-bold">Artistry Avenue</Link>
   </div>
   <div className="navbar-end">
   <ul className="menu menu-horizontal px-1 hidden lg:flex gap-3 mr-3 text-[15px] font-bold">
@@ -46,9 +51,11 @@ const Navbar = () => {
     {
     user? <div className="avatar ml-3">
       
-    <div className="w-12 rounded-full cursor-pointer">
-      <img src= {user.photoURL} title={user.displayName} />
-      
+    <div className="md:w-12 w-12 rounded-full cursor-pointer">
+      <a className="my-anchor-element"><img src= {user.photoURL}/></a>
+     <Tooltip anchorSelect=".my-anchor-element" place="top">
+     {user.displayName} 
+     </Tooltip>
     </div>
     <button onClick={()=>handleSignout()} className='p-3 rounded-lg ml-3 text-white font-bold bg-yellow-300'>Logout</button>
   </div>:<>
